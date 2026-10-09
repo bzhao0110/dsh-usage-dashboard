@@ -1,0 +1,4 @@
+# dsh-usage-dashboard loader patch: one plugin instance, no configuration needed.
+- insert:
+    - id: token-stats
+      name: dsh-usage-dashboard

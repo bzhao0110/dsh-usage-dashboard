@@ -1,0 +1,55 @@
+{
+  "name": "dsh-usage-dashboard",
+  "version": "0.1.0",
+  "description": "Token usage statistics dashboard (zcode-style) for DeepSeek Harness: stat cards, activity heatmap, daily trend and model share",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check lib/index.js && node --check lib/client.js && node --check tools/backfill.mjs"
+  },
+  "files": [
+    "lib/**/*.js",
+    "tools/**/*.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "token-usage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bzhao0110/dsh-usage-dashboard.git"
+  },
+  "homepage": "https://github.com/bzhao0110/dsh-usage-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/bzhao0110/dsh-usage-dashboard/issues"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-ui-settings": ">=0.1.0-rc.6 <0.2.0-0 || >=0.2.0-rc <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.1.0-rc.6 <0.2.0-0 || >=0.2.0-rc <0.3.0-0",
+    "@deepseek-ai/dsh-session-projection": ">=0.1.0-rc.6 <0.2.0-0 || >=0.2.0-rc <0.3.0-0",
+    "react": "^18.2.0"
+  }
+}
