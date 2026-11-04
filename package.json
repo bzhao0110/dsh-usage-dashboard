@@ -1,7 +1,7 @@
 {
   "name": "dsh-usage-dashboard",
   "version": "0.1.1",
-  "description": "Token usage statistics dashboard (zcode-style) for DeepSeek Harness: stat cards, activity heatmap, daily trend and model share",
+  "description": "Token usage dashboard for DeepSeek Harness (GitHub-only distribution, not published to npm): stat cards, 12-month activity heatmap, per-model daily trend and model share, with hover tooltips",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -18,6 +18,7 @@
     "tools/**/*.mjs",
     "cordis.patch.yml",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "keywords": [
